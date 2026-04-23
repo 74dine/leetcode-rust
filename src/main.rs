@@ -1,6 +1,7 @@
 mod design_hashset;
 mod group_anagrams;
 mod longest_common_prefix;
+mod longest_consecutive_sequence;
 mod majority_element;
 mod max_consecutive_ones;
 mod remove_element;
@@ -30,8 +31,8 @@ fn main() {
 #[allow(unused_variables)]
 #[allow(unused_mut)]
 fn run_tests() {
-    for (input, expected) in &valid_palindrome::get_test_cases() {
-        let mut result = valid_palindrome::solve(input.to_owned());
+    for (input, expected) in &longest_consecutive_sequence::get_test_cases() {
+        let mut result = longest_consecutive_sequence::solve(input.to_owned());
 
         // result = sort_colors::organize_result().unwrap();
 
