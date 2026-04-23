@@ -21,17 +21,17 @@ pub fn solve(nums: Vec<i32>) -> i32 {
 pub fn organize_result() {}
 
 pub fn longest_consecutive(nums: Vec<i32>) -> i32 {
-    let mut distinct: HashSet<i32> = HashSet::from_iter(nums.clone().into_iter());
+    let distinct: HashSet<i32> = HashSet::from_iter(nums.into_iter());
 
     let mut max_len = 0;
 
-    for num in nums {
+    for &num in &distinct {
         if distinct.contains(&(num - 1)) {
             continue;
         }
 
         let mut cur_len = 1;
-        while distinct.remove(&(num + cur_len)) {
+        while distinct.contains(&(num + cur_len)) {
             cur_len += 1;
         }
 
