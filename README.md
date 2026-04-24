@@ -9,5 +9,5 @@ Date of creation: 04/22/2026
 
 Last updated: 04/24/2026
 
-Last problem: [Valid Palindrome II](./src/valid_palindrome_ii.rs)
-([LeetCode](https://leetcode.com/problems/valid-palindrome-ii/))
+Last problem: [Merge Strings Alternately](src/merge_strings_alternately.rs)
+([LeetCode](https://leetcode.com/problems/merge-strings-alternately))
