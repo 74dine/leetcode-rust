@@ -15,6 +15,7 @@ mod top_k_frequent_elements;
 mod two_sum;
 mod valid_palindrome;
 mod valid_palindrome_ii;
+mod merge_alternately;
 
 // #[allow(unreachable_code)]
 #[allow(dead_code)]
@@ -32,8 +33,8 @@ fn main() {
 #[allow(unused_variables)]
 #[allow(unused_mut)]
 fn run_tests() {
-    for (input, expected) in &valid_palindrome_ii::get_test_cases() {
-        let mut result = valid_palindrome_ii::solve(input.to_owned());
+    for (input, expected) in &merge_alternately::get_test_cases() {
+        let mut result = merge_alternately::solve((*input).0.to_owned(), (*input).1.to_owned());
 
         // result = sort_colors::organize_result().unwrap();
 
