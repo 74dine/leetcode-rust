@@ -14,6 +14,7 @@ mod template;
 mod top_k_frequent_elements;
 mod two_sum;
 mod valid_palindrome;
+mod valid_palindrome_ii;
 
 // #[allow(unreachable_code)]
 #[allow(dead_code)]
@@ -31,8 +32,8 @@ fn main() {
 #[allow(unused_variables)]
 #[allow(unused_mut)]
 fn run_tests() {
-    for (input, expected) in &longest_consecutive_sequence::get_test_cases() {
-        let mut result = longest_consecutive_sequence::solve(input.to_owned());
+    for (input, expected) in &valid_palindrome_ii::get_test_cases() {
+        let mut result = valid_palindrome_ii::solve(input.to_owned());
 
         // result = sort_colors::organize_result().unwrap();
 

@@ -9,4 +9,5 @@ Date of creation: 04/22/2026
 
 Last updated: 04/22/2026
 
-Last problem: [Longest Consecutive Sequence](./src/longest_consecutive_sequence.rs) ([LeetCode](https://leetcode.com/problems/longest-consecutive-sequence))
+Last problem: [Valid Palindrome II](./src/valid_palindrome_ii.rs)
+([LeetCode](https://leetcode.com/problems/valid-palindrome-ii/))
