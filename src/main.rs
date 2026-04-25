@@ -4,6 +4,8 @@ mod longest_common_prefix;
 mod longest_consecutive_sequence;
 mod majority_element;
 mod max_consecutive_ones;
+mod merge_sorted_array;
+mod merge_strings_alternately;
 mod remove_element;
 mod reverse_string;
 mod set_mismatch;
@@ -15,7 +17,6 @@ mod top_k_frequent_elements;
 mod two_sum;
 mod valid_palindrome;
 mod valid_palindrome_ii;
-mod merge_strings_alternately;
 
 // #[allow(unreachable_code)]
 #[allow(dead_code)]
@@ -33,10 +34,14 @@ fn main() {
 #[allow(unused_variables)]
 #[allow(unused_mut)]
 fn run_tests() {
-    for (input, expected) in &merge_strings_alternately::get_test_cases() {
-        let mut result = merge_strings_alternately::solve((*input).0.to_owned(), (*input).1.to_owned());
+    for (input, expected) in &merge_sorted_array::get_test_cases() {
+        let left = &mut input.0.clone();
+        let right = &mut input.2.clone();
+
+        let mut result = merge_sorted_array::solve(left, input.1, right, input.3);
 
         // result = sort_colors::organize_result().unwrap();
+        let result = left.to_owned();
 
         if result == *expected {
             println!("[passed] Case {:?} => {:?}", input, expected);

@@ -7,7 +7,7 @@ I have solved using Rust.
 
 Date of creation: 04/22/2026
 
-Last updated: 04/24/2026
+Last updated: 04/25/2026
 
-Last problem: [Merge Strings Alternately](src/merge_strings_alternately.rs)
-([LeetCode](https://leetcode.com/problems/merge-strings-alternately))
+Last problem: [Merge Sorted Array](src/merge_sorted_array.rs)
+([LeetCode](https://leetcode.com/problems/merge-sorted-array/submissions/1987877802/))
