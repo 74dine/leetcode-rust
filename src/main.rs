@@ -17,6 +17,7 @@ mod top_k_frequent_elements;
 mod two_sum;
 mod valid_palindrome;
 mod valid_palindrome_ii;
+mod baseball_game;
 
 // #[allow(unreachable_code)]
 #[allow(dead_code)]
@@ -34,14 +35,13 @@ fn main() {
 #[allow(unused_variables)]
 #[allow(unused_mut)]
 fn run_tests() {
-    for (input, expected) in &merge_sorted_array::get_test_cases() {
-        let left = &mut input.0.clone();
-        let right = &mut input.2.clone();
+    for (input, expected) in &baseball_game::get_test_cases() {
+        // let left = &mut input.0.clone();
+        // let right = &mut input.2.clone();
 
-        let mut result = merge_sorted_array::solve(left, input.1, right, input.3);
+        let mut result = baseball_game::solve(input.to_owned());
 
         // result = sort_colors::organize_result().unwrap();
-        let result = left.to_owned();
 
         if result == *expected {
             println!("[passed] Case {:?} => {:?}", input, expected);
