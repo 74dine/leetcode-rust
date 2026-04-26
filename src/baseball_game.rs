@@ -28,8 +28,8 @@ pub fn get_test_cases() -> Vec<(Vec<String>, i32)> {
         (vec!["-1".to_string(), "C".to_string()], 0),
         (vec!["-2".to_string(), "D".to_string()], -6),
         (vec!["0".to_string(), "3".to_string(), "+".to_string()], 6),
-        (vec!["1".to_string(), "+".to_string()], 2),
-        (vec!["-1".to_string(), "+".to_string()], -2),
+        // (vec!["1".to_string(), "+".to_string()], 2),         // invalid test case - LC constraints suggest "+" is guaranteed to have two previous entries
+        // (vec!["-1".to_string(), "+".to_string()], -2),       // invalid test case - LC constraints suggest "+" is guaranteed to have two previous entries
         (vec!["0".to_string(), "D".to_string()], 0),
         (vec!["0".to_string()], 0),
         (vec!["1".to_string()], 1),
@@ -45,35 +45,18 @@ pub fn solve(ops: Vec<String>) -> i32 {
 pub fn organize_result() {}
 
 pub fn cal_points(operations: Vec<String>) -> i32 {
-    let mut history: Vec<i32> = vec![];
+    let mut history: Vec<i32> = Vec::with_capacity(operations.len());
 
     for n in &operations {
         match n as &str {
-           "+" => {
-                let last = history.last().unwrap();
-                let second_last = history.iter().nth(history.len() - 2).unwrap();
-
-                let sum_of_last_two = *second_last + *last;
-
-                history.push(sum_of_last_two);
-            }
-            "D" => {
-                let previous = history.last();
-                if previous != None {
-                    let double = previous.unwrap() * 2;
-                    history.push(double);
-                }
-            }
+            "+" => history.push(history[history.len() - 2] + history[history.len() - 1]),
+            "D" => history.push(history[history.len() - 1] * 2),
             "C" => {
                 history.pop();
             }
-            _ => {
-                let int = n.parse::<i32>().unwrap();
-
-                history.push(int);
-            }
+            _ => history.push(n.parse().unwrap()),
         }
     }
 
-    history.iter().sum::<i32>()
+    history.into_iter().sum::<i32>()
 }
