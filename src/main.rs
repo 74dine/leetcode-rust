@@ -18,6 +18,7 @@ mod two_sum;
 mod valid_palindrome;
 mod valid_palindrome_ii;
 mod baseball_game;
+mod find_peak_element;
 
 // #[allow(unreachable_code)]
 #[allow(dead_code)]
@@ -35,11 +36,8 @@ fn main() {
 #[allow(unused_variables)]
 #[allow(unused_mut)]
 fn run_tests() {
-    for (input, expected) in &baseball_game::get_test_cases() {
-        // let left = &mut input.0.clone();
-        // let right = &mut input.2.clone();
-
-        let mut result = baseball_game::solve(input.to_owned());
+    for (input, expected) in &find_peak_element::get_test_cases() {
+        let mut result = find_peak_element::solve(input.to_owned());
 
         // result = sort_colors::organize_result().unwrap();
 
