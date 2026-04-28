@@ -1,4 +1,7 @@
+mod baseball_game;
+mod bench;
 mod design_hashset;
+mod find_peak_element;
 mod group_anagrams;
 mod longest_common_prefix;
 mod longest_consecutive_sequence;
@@ -17,17 +20,18 @@ mod top_k_frequent_elements;
 mod two_sum;
 mod valid_palindrome;
 mod valid_palindrome_ii;
-mod baseball_game;
-mod find_peak_element;
 mod valid_parentheses;
 
-// #[allow(unreachable_code)]
+#[allow(unreachable_code)]
 #[allow(dead_code)]
 fn main() {
     // println!("{}", '(' as u8);
     // println!("{}", '[' as u8);
     // println!("{}", '{' as u8);
-    // return;
+    valid_parentheses::benchmark("1");
+    valid_parentheses::benchmark("2");
+
+    return;
 
     run_tests();
 }
