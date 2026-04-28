@@ -7,7 +7,7 @@ I have solved using Rust.
 
 Date of creation: 04/22/2026
 
-Last updated: 04/27/2026
+Last updated: 04/28/2026
 
-Last problem: [Find Peak Element](src/find_peak_element.rs)
-([LeetCode](https://leetcode.com/problems/find-peak-element/))
+Last problem: [Valid Parentheses](src/valid_parentheses.rs)
+([LeetCode](https://leetcode.com/problems/valid-parentheses/))

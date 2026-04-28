@@ -19,15 +19,15 @@ mod valid_palindrome;
 mod valid_palindrome_ii;
 mod baseball_game;
 mod find_peak_element;
+mod valid_parentheses;
 
 // #[allow(unreachable_code)]
 #[allow(dead_code)]
 fn main() {
-    // println!("{}", 'A' as u8);
-    // println!("{}", 122 as char);
-    // for code in 0..=97 {
-    //     println!("[{code}] {}", code as u8 as char);
-    // }
+    // println!("{}", '(' as u8);
+    // println!("{}", '[' as u8);
+    // println!("{}", '{' as u8);
+    // return;
 
     run_tests();
 }
@@ -36,8 +36,8 @@ fn main() {
 #[allow(unused_variables)]
 #[allow(unused_mut)]
 fn run_tests() {
-    for (input, expected) in &find_peak_element::get_test_cases() {
-        let mut result = find_peak_element::solve(input.to_owned());
+    for (input, expected) in &valid_parentheses::get_test_cases() {
+        let mut result = valid_parentheses::solve(input.to_owned());
 
         // result = sort_colors::organize_result().unwrap();
 
