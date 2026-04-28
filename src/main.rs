@@ -9,6 +9,7 @@ mod majority_element;
 mod max_consecutive_ones;
 mod merge_sorted_array;
 mod merge_strings_alternately;
+mod remove_duplicates_from_sorted_array;
 mod remove_element;
 mod reverse_string;
 mod set_mismatch;
@@ -21,19 +22,10 @@ mod two_sum;
 mod valid_palindrome;
 mod valid_palindrome_ii;
 mod valid_parentheses;
-mod remove_duplicates_from_sorted_array;
 
 #[allow(unreachable_code)]
 #[allow(dead_code)]
 fn main() {
-    // println!("{}", '(' as u8);
-    // println!("{}", '[' as u8);
-    // println!("{}", '{' as u8);
-    valid_parentheses::benchmark("1");
-    valid_parentheses::benchmark("2");
-
-    return;
-
     run_tests();
 }
 
@@ -41,8 +33,8 @@ fn main() {
 #[allow(unused_variables)]
 #[allow(unused_mut)]
 fn run_tests() {
-    for (input, expected) in &valid_parentheses::get_test_cases() {
-        let mut result = valid_parentheses::solve(input.to_owned());
+    for (input, expected) in &remove_duplicates_from_sorted_array::get_test_cases() {
+        let mut result = remove_duplicates_from_sorted_array::solve(&mut input.to_owned());
 
         // result = sort_colors::organize_result().unwrap();
 
