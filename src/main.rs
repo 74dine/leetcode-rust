@@ -21,6 +21,7 @@ mod two_sum;
 mod valid_palindrome;
 mod valid_palindrome_ii;
 mod valid_parentheses;
+mod remove_duplicates_from_sorted_array;
 
 #[allow(unreachable_code)]
 #[allow(dead_code)]

@@ -9,5 +9,5 @@ Date of creation: 04/22/2026
 
 Last updated: 04/28/2026
 
-Last problem: [Valid Parentheses](src/valid_parentheses.rs)
-([LeetCode](https://leetcode.com/problems/valid-parentheses/))
+Last problem: [Remove Duplicates From Sorted Array](src/remove_duplicates_from_sorted_array.rs)
+([LeetCode](https://leetcode.com/problems/remove-duplicates-from-sorted-array/))
