@@ -26,25 +26,5 @@ mod valid_parentheses;
 #[allow(unreachable_code)]
 #[allow(dead_code)]
 fn main() {
-    run_tests();
-}
-
-#[allow(dead_code)]
-#[allow(unused_variables)]
-#[allow(unused_mut)]
-fn run_tests() {
-    for (input, expected) in &remove_duplicates_from_sorted_array::get_test_cases() {
-        let mut result = remove_duplicates_from_sorted_array::solve(&mut input.to_owned());
-
-        // result = sort_colors::organize_result().unwrap();
-
-        if result == *expected {
-            println!("[passed] Case {:?} => {:?}", input, expected);
-        } else {
-            println!(
-                "[failed] Case {:?} => {:?} | Returned: {:?}",
-                input, expected, result
-            );
-        }
-    }
+    eprintln!("Please run the files individually with `cargo test <file-name>`")
 }

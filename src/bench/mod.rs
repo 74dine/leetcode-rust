@@ -1,6 +1,7 @@
 use std::hint::black_box;
 use std::time::{Duration, Instant};
 
+#[allow(dead_code)]
 pub fn benchmark<Func, Factory, FactoryResult, FuncResult>(name: &str, mut f: Func, mut factory: Factory, iterations: usize)
 where
     Func: FnMut(FactoryResult) -> FuncResult,
