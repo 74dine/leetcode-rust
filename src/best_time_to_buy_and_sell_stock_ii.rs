@@ -6,7 +6,7 @@ pub fn solve() {
         (vec![7, 6, 4, 3, 1], 0),
     ];
 
-    crate::run_cases!(cases, |input| max_profit(input));
+    crate::run_cases!(cases, |input| max_profit(input), false);
 }
 
 #[allow(dead_code)]
