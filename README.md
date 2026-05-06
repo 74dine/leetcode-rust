@@ -9,5 +9,5 @@ Date of creation: 04/22/2026
 
 Last updated: 05/04/2026
 
-Last problem: [Implement Stack using Queues](src/implement_stack_using_queues.rs)
-([LeetCode](https://leetcode.com/problems/implement-stack-using-queues/))
+Last problem: [Implement Queue using Stacks](src/implement_queue_using_stacks.rs)
+([LeetCode](https://leetcode.com/problems/implement-queue-using-stacks/))
