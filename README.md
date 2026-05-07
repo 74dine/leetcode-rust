@@ -7,7 +7,7 @@ I have solved using Rust.
 
 Date of creation: 04/22/2026
 
-Last updated: 05/07/2026
+Last updated: 05/08/2026
 
-Last problem: [Min Stack](src/min_stack.rs)
-([LeetCode](https://leetcode.com/problems/min-stack))
+Last problem: [Set Mismatch](src/set_mismatch.rs)
+([LeetCode](https://leetcode.com/problems/set-mismatch))
