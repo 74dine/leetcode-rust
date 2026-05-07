@@ -1,35 +1,50 @@
-﻿#[allow(dead_code)]
-pub fn get_test_cases() -> Vec<(Vec<i32>, Vec<i32>)> {
+﻿use std::collections::HashSet;
+
+#[allow(dead_code)]
+pub fn find_error_nums(nums: Vec<i32>) -> Vec<i32> {
+    let expected_sum = (nums.len() * (nums.len() + 1) / 2) as i32;
+    let nums_sum = nums.iter().sum::<i32>();
+
+    let distinct: HashSet<i32> = nums.into_iter().collect();
+    let distinct_sum = distinct.into_iter().sum::<i32>();
+
     vec![
-        (vec![1, 2, 2, 4], vec![2, 3]),
-        (vec![1, 1], vec![1, 2]),
-        (vec![2, 2], vec![2, 1]),
-        (vec![3, 3, 2, 3], vec![2, 1]),
-        (vec![3, 2, 2], vec![2, 1]),
+        nums_sum - distinct_sum,
+        expected_sum - distinct_sum,
     ]
 }
 
-#[allow(dead_code)]
-pub fn solve(nums: Vec<i32>) -> Vec<i32> {
-    find_error_nums(nums)
-}
+#[cfg(test)]
+mod set_mismatch_tests {
+    use crate::set_mismatch::find_error_nums;
 
-#[allow(dead_code)]
-pub fn organize_result() {}
-
-fn find_error_nums(nums: Vec<i32>) -> Vec<i32> {
-    let mut sum = nums[0];
-    let mut idx = 1;
-    for i in 1..nums.len() {
-        sum += nums[i];
-        idx += 1;
-
-        let expected_sum = (idx * (idx + 1)) / 2;
-        if sum != expected_sum {
-            println!("expected: {} at: [{i}]", expected_sum - (sum - nums[i]));
-            return vec![nums[i], expected_sum - (sum - nums[i])];
-        }
+    #[test]
+    fn lc_case_1() {
+        assert_eq!(find_error_nums(vec![3, 2, 3, 4, 6, 5]), vec![3, 1]);
     }
 
-    vec![]
+    #[test]
+    fn lc_case_2() {
+        assert_eq!(find_error_nums(vec![3, 2, 2]), vec![2, 1]);
+    }
+
+    #[test]
+    fn lc_case_3() {
+        assert_eq!(find_error_nums(vec![1, 2, 2, 4]), vec![2, 3]);
+    }
+
+    #[test]
+    fn lc_case_4() {
+        assert_eq!(find_error_nums(vec![1, 1]), vec![1, 2]);
+    }
+
+    #[test]
+    fn lc_case_5() {
+        assert_eq!(find_error_nums(vec![2, 2]), vec![2, 1]);
+    }
+
+    #[test]
+    fn lc_case_6() {
+        assert_eq!(find_error_nums(vec![3, 3, 1]), vec![3, 2]);
+    }
 }
