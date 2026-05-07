@@ -7,7 +7,7 @@ I have solved using Rust.
 
 Date of creation: 04/22/2026
 
-Last updated: 05/04/2026
+Last updated: 05/07/2026
 
-Last problem: [Implement Queue using Stacks](src/implement_queue_using_stacks.rs)
-([LeetCode](https://leetcode.com/problems/implement-queue-using-stacks/))
+Last problem: [Single Element in a Sorted Array](src/single_element_in_a_sorted_array.rs)
+([LeetCode](https://leetcode.com/problems/single-element-in-a-sorted-array))
