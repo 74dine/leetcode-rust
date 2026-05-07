@@ -9,5 +9,5 @@ Date of creation: 04/22/2026
 
 Last updated: 05/07/2026
 
-Last problem: [Single Element in a Sorted Array](src/single_element_in_a_sorted_array.rs)
-([LeetCode](https://leetcode.com/problems/single-element-in-a-sorted-array))
+Last problem: [Min Stack](src/min_stack.rs)
+([LeetCode](https://leetcode.com/problems/min-stack))
