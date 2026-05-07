@@ -3,28 +3,18 @@ pub fn single_non_duplicate(nums: Vec<i32>) -> i32 {
     let mut left = 0;
     let mut right = nums.len() - 1;
 
-    while left <= right {
+    while left < right {
         let mid = left + (right - left) / 2;
 
-        if mid == 0
-            || mid == nums.len() - 1
-            || (nums[mid] != nums[mid - 1] && nums[mid] != nums[mid + 1])
-        {
-            return nums[mid];
-        }
-
-        let left_size = mid - left - (nums[mid] == nums[mid - 1]) as usize;
-
-        if left_size % 2 == 0 {
-            left = mid + 1 + (nums[mid] == nums[mid + 1]) as usize;
-
+        if nums[mid] == nums[mid ^ 1] {
+            left = mid + 1;
             continue;
         }
 
-        right = mid - 1 - (nums[mid] == nums[mid - 1]) as usize;
+        right = mid;
     }
 
-    unreachable!();
+    nums[left]
 }
 
 #[cfg(test)]
