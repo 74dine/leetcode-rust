@@ -7,7 +7,7 @@ I have solved using Rust.
 
 Date of creation: 04/22/2026
 
-Last updated: 05/08/2026
+Last updated: 05/10/2026
 
-Last problem: [Set Mismatch](src/set_mismatch.rs)
-([LeetCode](https://leetcode.com/problems/set-mismatch))
+Last problem: [3Sum](src/_3sum.rs)
+([LeetCode](https://leetcode.com/problems/3sum))
