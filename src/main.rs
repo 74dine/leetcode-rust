@@ -5,6 +5,7 @@ mod single_element_in_a_sorted_array;
 mod test_runner;
 mod min_stack;
 mod set_mismatch;
+mod _3sum;
 
 #[allow(unreachable_code)]
 #[allow(dead_code)]
