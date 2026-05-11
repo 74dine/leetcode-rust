@@ -7,7 +7,7 @@ I have solved using Rust.
 
 Date of creation: 04/22/2026
 
-Last updated: 05/10/2026
+Last updated: 05/11/2026
 
-Last problem: [3Sum](src/_3sum.rs)
-([LeetCode](https://leetcode.com/problems/3sum))
+Last problem: [Trapping Rain Water](src/trapping_rain_water.rs)
+([LeetCode](https://leetcode.com/problems/trapping-rain-water))

@@ -6,6 +6,7 @@ mod test_runner;
 mod min_stack;
 mod set_mismatch;
 mod _3sum;
+mod trapping_rain_water;
 
 #[allow(unreachable_code)]
 #[allow(dead_code)]
