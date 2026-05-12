@@ -9,6 +9,7 @@ mod _3sum;
 mod trapping_rain_water;
 mod _4sum;
 mod container_with_most_water;
+mod boats_to_save_people;
 
 #[allow(unreachable_code)]
 #[allow(dead_code)]
