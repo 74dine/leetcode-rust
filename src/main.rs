@@ -8,6 +8,7 @@ mod set_mismatch;
 mod _3sum;
 mod trapping_rain_water;
 mod _4sum;
+mod container_with_most_water;
 
 #[allow(unreachable_code)]
 #[allow(dead_code)]
