@@ -12,6 +12,7 @@ mod container_with_most_water;
 mod boats_to_save_people;
 mod evaluate_reverse_polish_notation;
 mod majority_element_ii;
+mod asteroid_collision;
 
 #[allow(unreachable_code)]
 #[allow(dead_code)]
