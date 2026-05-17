@@ -1,27 +1,17 @@
 ﻿#[allow(dead_code)]
 pub fn next_greater_element(nums: Vec<i32>, search_arr: Vec<i32>) -> Vec<i32> {
-    let mut result = Vec::with_capacity(nums.len());
+    nums.iter()
+        .map(|x| {
+            let Some(idx) = search_arr.iter().position(|&y| y == *x) else {
+                return -1;
+            };
 
-    // naive O(mn) approach
-    for n in nums {
-        let mut pair = -2;
-
-        for m in &search_arr {
-            if *m == n {
-                pair = -1;
-                continue;
-            }
-
-            if pair == -1 && *m > n {
-                pair = *m;
-                break;
-            }
-        }
-
-        result.push(pair.max(-1));
-    }
-
-    result
+            *search_arr[idx + 1..]
+                .iter()
+                .find(|&&y| y > *x)
+                .unwrap_or(&-1)
+        })
+        .collect()
 }
 
 #[cfg(test)]
