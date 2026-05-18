@@ -1,17 +1,11 @@
 ﻿#[allow(dead_code)]
-pub fn daily_temperatures(temperatures: Vec<i32>) -> Vec<i32> {
-    let mut history = vec![];
+pub fn daily_temperatures(nums: Vec<i32>) -> Vec<i32> {
+    let mut history = Vec::with_capacity(nums.len());
+    let mut result = vec![0; nums.len()];
 
-    let mut result = vec![0; temperatures.len()];
-
-    for i in 0..temperatures.len() {
-        while let Some(j) = history.last() {
-            if temperatures[*j] < temperatures[i] {
-                result[*j] = (i - *j) as i32;
-                history.pop();
-            } else {
-                break;
-            }
+    for i in 0..nums.len() {
+        while let Some(j) = history.pop_if(|x: &mut usize| nums[*x] < nums[i]) {
+            result[j] = (i - j) as i32;
         }
 
         history.push(i);
