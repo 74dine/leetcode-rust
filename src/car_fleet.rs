@@ -1,30 +1,18 @@
 ﻿#[allow(dead_code)]
 pub fn car_fleet(target: i32, position: Vec<i32>, speed: Vec<i32>) -> i32 {
-    let mut view = position
-        .iter()
-        .zip(speed.iter())
-        .collect::<Vec<(&i32, &i32)>>();
-    view.sort_unstable_by(|a, b| b.0.cmp(&a.0));
-    // println!("{:?}", view);
+    let mut view: Vec<_> = position.iter().zip(speed.iter()).collect();
+    view.sort_unstable_by_key(|x| -x.0);
 
-    let mut fleets = vec![];
+    view.into_iter()
+        .fold((0f32, 0i32), |(p_fleet, mut count), (pos, spd)| {
+            let fleet = (target - pos) as f32 / *spd as f32;
+            if fleet > p_fleet {
+                count += 1;
+            }
 
-    for (pos, spd) in view {
-        let fleet = (target - pos) as f32 / *spd as f32;
-        // println!("{}", fleet);
-
-        if fleets.is_empty() {
-            fleets.push(fleet);
-            continue;
-        }
-
-        let p_fleet = fleets.last().unwrap();
-        if fleet > *p_fleet {
-            fleets.push(fleet);
-        }
-    }
-
-    fleets.len() as i32
+            (p_fleet.max(fleet), count)
+        })
+        .1
 }
 
 #[cfg(test)]
@@ -46,6 +34,7 @@ mod car_fleet_tests {
         assert_eq!(1, car_fleet(100, vec![0, 2, 4], vec![4, 2, 1]));
     }
 
+    // requires float
     #[test]
     fn lc_case_4() {
         assert_eq!(2, car_fleet(10, vec![6, 8], vec![3, 2]));
