@@ -14,6 +14,7 @@ mod evaluate_reverse_polish_notation;
 mod majority_element_ii;
 mod asteroid_collision;
 mod next_greater_element_i;
+mod daily_temperatures;
 
 #[allow(unreachable_code)]
 #[allow(dead_code)]
