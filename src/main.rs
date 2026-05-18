@@ -15,6 +15,7 @@ mod majority_element_ii;
 mod asteroid_collision;
 mod next_greater_element_i;
 mod daily_temperatures;
+mod online_stock_span;
 
 #[allow(unreachable_code)]
 #[allow(dead_code)]
