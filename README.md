@@ -7,7 +7,7 @@ I have solved using Rust.
 
 Date of creation: 04/22/2026
 
-Last updated: 05/18/2026
+Last updated: 05/19/2026
 
-Last problem: [Car Fleet](src/car_fleet.rs)
-([LeetCode](https://leetcode.com/problems/car-fleet/))
+Last problem: [Simplify Path](src/simplify_path.rs)
+([LeetCode](https://leetcode.com/problems/simplify-path))
