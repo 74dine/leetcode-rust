@@ -18,6 +18,7 @@ mod daily_temperatures;
 mod online_stock_span;
 mod car_fleet;
 mod simplify_path;
+mod decode_string;
 
 #[allow(unreachable_code)]
 #[allow(dead_code)]

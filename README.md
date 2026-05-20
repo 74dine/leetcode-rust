@@ -9,5 +9,5 @@ Date of creation: 04/22/2026
 
 Last updated: 05/19/2026
 
-Last problem: [Simplify Path](src/simplify_path.rs)
-([LeetCode](https://leetcode.com/problems/simplify-path))
+Last problem: [Decode String](src/decode_string.rs)
+([LeetCode](https://leetcode.com/problems/decode-string/))
