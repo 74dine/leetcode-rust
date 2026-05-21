@@ -7,7 +7,7 @@ I have solved using Rust.
 
 Date of creation: 04/22/2026
 
-Last updated: 05/19/2026
+Last updated: 05/22/2026
 
-Last problem: [Decode String](src/decode_string.rs)
-([LeetCode](https://leetcode.com/problems/decode-string/))
+Last problem: [Maximum Frequency Stack](src/maximum_frequency_stack.rs)
+([LeetCode](https://leetcode.com/problems/maximum-frequency-stack))

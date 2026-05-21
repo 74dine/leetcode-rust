@@ -19,6 +19,7 @@ mod online_stock_span;
 mod car_fleet;
 mod simplify_path;
 mod decode_string;
+mod maximum_frequency_stack;
 
 #[allow(unreachable_code)]
 #[allow(dead_code)]
