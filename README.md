@@ -9,5 +9,5 @@ Date of creation: 04/22/2026
 
 Last updated: 05/22/2026
 
-Last problem: [Binary Search](src/binary_search.rs)
-([LeetCode](https://leetcode.com/problems/binary-search/))
+Last problem: [Search Insert Position](src/search_insert_position.rs)
+([LeetCode](https://leetcode.com/problems/search-insert-position/))

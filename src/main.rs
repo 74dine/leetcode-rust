@@ -21,6 +21,7 @@ mod simplify_path;
 mod decode_string;
 mod maximum_frequency_stack;
 mod binary_search;
+mod search_insert_position;
 
 #[allow(unreachable_code)]
 #[allow(dead_code)]
