@@ -1,25 +1,9 @@
 ﻿#[allow(dead_code)]
 pub fn search_insert(nums: Vec<i32>, target: i32) -> i32 {
-    let (mut l, mut r) = (0, nums.len() - 1);
-
-    while l <= r {
-        let m = l + (r - l) / 2;
-
-        if nums[m] == target {
-            return m as i32;
-        }
-
-        if nums[m] > target {
-            if m == 0 {
-                break;
-            }
-            r = m - 1;
-        } else {
-            l = m + 1;
-        }
+    match nums.binary_search(&target) {
+        Err(i) => i as i32,
+        Ok(i) => i as i32,
     }
-
-    l as i32
 }
 
 #[cfg(test)]
