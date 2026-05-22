@@ -17,11 +17,24 @@ impl FreqStack {
     }
 
     fn push(&mut self, val: i32) {
-        let freq = self.freq.entry(val).and_modify(|f| *f += 1).or_insert(1);
+        let freq = match self.freq.insert(val, 1) {
+            None => 1,
+            Some(prev) => {
+                self.freq.insert(val, prev + 1);
+                prev + 1
+            }
+        };
 
-        self.max_freq = self.max_freq.max(*freq);
+        self.max_freq = self.max_freq.max(freq);
 
-        self.freq_history.entry(*freq).or_insert(vec![]).push(val);
+        match self.freq_history.get_mut(&freq) {
+            None => {
+                self.freq_history.insert(freq, vec![val]);
+            }
+            Some(arr) => {
+                arr.push(val);
+            }
+        }
     }
 
     fn pop(&mut self) -> i32 {
@@ -32,7 +45,12 @@ impl FreqStack {
             self.max_freq -= 1;
         }
 
-        self.freq.entry(n).and_modify(|f| *f -= 1);
+        match self.freq.get_mut(&n) {
+            None => unreachable!(),
+            Some(n_try) => {
+                *n_try -= 1;
+            }
+        };
 
         n
     }
