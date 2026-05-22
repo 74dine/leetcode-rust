@@ -1,25 +1,8 @@
 ﻿pub fn search(nums: Vec<i32>, target: i32) -> i32 {
-    if target < nums[0] || target > nums[nums.len() - 1] {
-        return -1;
+    match nums.binary_search(&target) {
+        Ok(i) => i as i32,
+        _ => -1,
     }
-
-    let (mut l, mut r) = (0, nums.len() - 1);
-
-    while l <= r {
-        let m = l + (r - l) / 2;
-
-        if nums[m] == target {
-            return m as i32;
-        }
-
-        if nums[m] > target {
-            r = m - 1;
-        } else {
-            l = m + 1;
-        }
-    }
-
-    -1
 }
 
 #[cfg(test)]
