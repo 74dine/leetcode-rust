@@ -1,9 +1,6 @@
 ﻿#[allow(dead_code)]
 pub fn search_insert(nums: Vec<i32>, target: i32) -> i32 {
-    match nums.binary_search(&target) {
-        Err(i) => i as i32,
-        Ok(i) => i as i32,
-    }
+    nums.partition_point(|n| n < &target) as i32
 }
 
 #[cfg(test)]
