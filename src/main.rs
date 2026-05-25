@@ -23,6 +23,7 @@ mod maximum_frequency_stack;
 mod binary_search;
 mod search_insert_position;
 mod remove_k_digits;
+mod largest_rectangle_in_histogram;
 
 #[allow(unreachable_code)]
 #[allow(dead_code)]

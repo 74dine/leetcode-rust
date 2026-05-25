@@ -7,7 +7,7 @@ I have solved using Rust.
 
 Date of creation: 04/22/2026
 
-Last updated: 05/22/2026
+Last updated: 05/25/2026
 
-Last problem: [Remove K Digits](src/search_insert_position.rs)
-([LeetCode](https://leetcode.com/problems/remove-k-digits))
+Last problem: [Largest Retangle in Histogram](src/largest_rectangle_in_histogram.rs)
+([LeetCode](https://leetcode.com/problems/largest-rectangle-in-histogram))
