@@ -25,6 +25,7 @@ mod search_insert_position;
 mod remove_k_digits;
 mod largest_rectangle_in_histogram;
 mod guess_number_higher_or_lower;
+mod sqrtx;
 
 #[allow(unreachable_code)]
 #[allow(dead_code)]

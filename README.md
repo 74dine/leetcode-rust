@@ -11,5 +11,5 @@ Date of creation: 04/22/2026
 
 Last updated: 05/26/2026
 
-Last problem: [Guess Number Higher or Lower](src/guess_number_higher_or_lower.rs)
-([LeetCode](https://leetcode.com/problems/guess-number-higher-or-lower/))
+Last problem: [Sqrt(x)](src/sqrtx.rs)
+([LeetCode](https://leetcode.com/problems/sqrtx/))
