@@ -24,6 +24,7 @@ mod binary_search;
 mod search_insert_position;
 mod remove_k_digits;
 mod largest_rectangle_in_histogram;
+mod guess_number_higher_or_lower;
 
 #[allow(unreachable_code)]
 #[allow(dead_code)]

@@ -9,7 +9,7 @@ I have solved using Rust.
 
 Date of creation: 04/22/2026
 
-Last updated: 05/25/2026
+Last updated: 05/26/2026
 
-Last problem: [Largest Retangle in Histogram](src/largest_rectangle_in_histogram.rs)
-([LeetCode](https://leetcode.com/problems/largest-rectangle-in-histogram))
+Last problem: [Guess Number Higher or Lower](src/guess_number_higher_or_lower.rs)
+([LeetCode](https://leetcode.com/problems/guess-number-higher-or-lower/))
