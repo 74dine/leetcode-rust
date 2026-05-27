@@ -1,43 +1,33 @@
 ﻿#[allow(dead_code)]
 pub fn search_matrix(matrix: Vec<Vec<i32>>, target: i32) -> bool {
-    if matrix.is_empty() {
+    if matrix.is_empty() || matrix[0].is_empty() {
         return false;
     }
 
-    let (mut i_l, mut i_r) = (0, matrix.len() - 1);
+    let r_len = matrix.len();
+    let c_len = matrix[0].len();
 
-    while i_l <= i_r {
-        let i_mid = i_l + (i_r - i_l) / 2;
+    let (mut l, mut r) = (0, r_len * c_len - 1);
 
-        let row = &matrix[i_mid];
+    while l <= r {
+        let mid = l + (r - l) / 2;
 
-        if row[0] > target {
-            if i_mid == 0 {
+        let row = mid / c_len;
+        let col = mid % c_len;
+
+        if matrix[row][col] == target {
+            return true;
+        }
+
+        if matrix[row][col] < target {
+            l = mid + 1;
+        } else {
+            if mid == 0 {
                 break;
             }
-            i_r = i_mid - 1;
-            continue;
+
+            r = mid - 1;
         }
-
-        let (mut l, mut r) = (0, row.len() - 1);
-        while l <= r {
-            let mid = l + (r - l) / 2;
-
-            if row[mid] == target {
-                return true;
-            }
-
-            if row[mid] > target {
-                if mid == 0 {
-                    break;
-                }
-                r = mid - 1;
-            } else {
-                l = mid + 1;
-            }
-        }
-
-        i_l = i_mid + 1;
     }
 
     false
