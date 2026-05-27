@@ -11,5 +11,5 @@ Date of creation: 04/22/2026
 
 Last updated: 05/27/2026
 
-Last problem: [Search a 2D Matrix](src/search_a_2d_matrix.rs)
-([LeetCode](https://leetcode.com/problems/search-a-2d-matrix))
+Last problem: [Contains Duplicate II](src/contains_duplicate_ii.rs)
+([LeetCode](https://leetcode.com/problems/contains-duplicate-ii))
