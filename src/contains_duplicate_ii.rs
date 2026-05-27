@@ -4,15 +4,14 @@
 pub fn contains_nearby_duplicate(nums: Vec<i32>, k: i32) -> bool {
     let k = k as usize;
 
-    if k > 1000 {
+    if k > 100 {
         let mut set = HashSet::with_capacity(k);
 
         for i in 0..nums.len() {
-            if set.contains(&nums[i]) {
+            if !set.insert(nums[i]) {
                 return true;
             }
 
-            set.insert(nums[i]);
             if set.len() > k {
                 set.remove(&nums[i - k]);
             }
