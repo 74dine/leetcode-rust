@@ -26,6 +26,7 @@ mod remove_k_digits;
 mod largest_rectangle_in_histogram;
 mod guess_number_higher_or_lower;
 mod sqrtx;
+mod search_a_2d_matrix;
 
 #[allow(unreachable_code)]
 #[allow(dead_code)]
