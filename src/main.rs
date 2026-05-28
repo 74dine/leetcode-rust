@@ -31,6 +31,7 @@ mod search_a_2d_matrix;
 mod contains_duplicate_ii;
 mod best_time_to_buy_and_sell_stock;
 mod reverse_linked_list;
+mod list_node;
 
 #[allow(unreachable_code)]
 #[allow(dead_code)]
