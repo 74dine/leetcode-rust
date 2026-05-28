@@ -1,3 +1,4 @@
+
 mod best_time_to_buy_and_sell_stock_ii;
 mod implement_queue_using_stacks;
 mod implement_stack_using_queues;
@@ -29,6 +30,7 @@ mod sqrtx;
 mod search_a_2d_matrix;
 mod contains_duplicate_ii;
 mod best_time_to_buy_and_sell_stock;
+mod reverse_linked_list;
 
 #[allow(unreachable_code)]
 #[allow(dead_code)]
