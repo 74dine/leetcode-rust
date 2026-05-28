@@ -28,6 +28,7 @@ mod guess_number_higher_or_lower;
 mod sqrtx;
 mod search_a_2d_matrix;
 mod contains_duplicate_ii;
+mod best_time_to_buy_and_sell_stock;
 
 #[allow(unreachable_code)]
 #[allow(dead_code)]
