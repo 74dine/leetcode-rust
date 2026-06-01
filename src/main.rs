@@ -33,6 +33,7 @@ mod best_time_to_buy_and_sell_stock;
 mod reverse_linked_list;
 mod merge_two_sorted_lists;
 mod list_node;
+mod minimum_cost_of_buying_candies_with_discount;
 
 #[allow(unreachable_code)]
 #[allow(dead_code)]
