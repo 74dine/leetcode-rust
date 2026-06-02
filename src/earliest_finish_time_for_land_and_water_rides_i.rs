@@ -7,17 +7,16 @@ pub fn earliest_finish_time(
 ) -> i32 {
     let mut min = 3000usize;
 
-    let water_rides = water_start_time.iter().zip(water_duration.iter());
+    for i in 0..land_start_time.len() {
+        for j in 0..water_start_time.len() {
+            let a = (land_start_time[i] + land_duration[i]).max(water_start_time[j])
+                + water_duration[j];
+            let b = (water_start_time[j] + water_duration[j]).max(land_start_time[i])
+                + land_duration[i];
 
-    for (land_start, land_end) in land_start_time.iter().zip(land_duration.iter()) {
-        for (water_start, water_end) in water_rides.to_owned() {
-            let a = (land_start + land_end).max(*water_start) + *water_end;
-            let b = (*water_start + *water_end).max(*land_start) + land_end;
-
-            let l_min = a.min(b);
-
-            if (l_min as usize) < min {
-                min = l_min as usize;
+            let cur_min = a.min(b) as usize;
+            if cur_min < min {
+                min = cur_min;
             }
         }
     }
