@@ -9,7 +9,7 @@ I have solved using Rust.
 
 Date of creation: 04/22/2026
 
-Last updated: 06/01/2026
+Last updated: 06/02/2026
 
-Last problem: [Minimum Cost of Buying Candies With Discount](src/minimum_cost_of_buying_candies_with_discount.rs)
-([LeetCode](https://leetcode.com/problems/minimum-cost-of-buying-candies-with-discount))
+Last problem: [Earliest Finish Time for Land and Water Rides I](src/earliest_finish_time_for_land_and_water_rides_i.rs)
+([LeetCode](https://leetcode.com/problems/earliest-finish-time-for-land-and-water-rides-i))
