@@ -35,6 +35,7 @@ mod merge_two_sorted_lists;
 mod list_node;
 mod minimum_cost_of_buying_candies_with_discount;
 mod earliest_finish_time_for_land_and_water_rides_i;
+mod earliest_finish_time_for_land_and_water_rides_ii;
 
 #[allow(unreachable_code)]
 #[allow(dead_code)]
