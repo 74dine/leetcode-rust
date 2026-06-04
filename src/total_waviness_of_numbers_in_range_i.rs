@@ -1,29 +1,29 @@
 ﻿#[allow(dead_code)]
 pub fn total_waviness(num1: i32, num2: i32) -> i32 {
-    let num1 = num1.max(100);
+    (num1..=num2)
+        .map(|mut d| {
+            let mut p1 = d % 10;
+            d /= 10;
 
-    let mut sum = 0;
-    let mut digits = Vec::with_capacity(6);
-    for mut n in num1..=num2 {
-        digits.clear();
-        while n > 0 {
-            digits.push(n % 10);
-            n /= 10;
-        }
+            let mut p2 = d % 10;
+            d /= 10;
 
-        let mut count = digits
-            .windows(3)
-            .filter(|d| d.len() == 3 && d[1] < d[0] && d[1] < d[2])
-            .count();
-        count += digits
-            .windows(3)
-            .filter(|d| d.len() == 3 && d[1] > d[0] && d[1] > d[2])
-            .count();
+            let mut sum = 0;
+            while d > 0 {
+                let p3 = d % 10;
+                d /= 10;
 
-        sum += count;
-    }
+                if (p1 < p2 && p2 > p3) || (p1 > p2 && p2 < p3) {
+                    sum += 1;
+                }
 
-    sum as i32
+                p1 = p2;
+                p2 = p3;
+            }
+
+            sum
+        })
+        .sum()
 }
 
 #[cfg(test)]
