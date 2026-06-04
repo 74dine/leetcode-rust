@@ -9,7 +9,7 @@ I have solved using Rust.
 
 Date of creation: 04/22/2026
 
-Last updated: 06/03/2026
+Last updated: 06/04/2026
 
-Last problem: [Earliest Finish Time for Land and Water Rides II](src/earliest_finish_time_for_land_and_water_rides_ii.rs)
-([LeetCode](https://leetcode.com/problems/earliest-finish-time-for-land-and-water-rides-ii))
+Last problem: [Total Waviness of Numbers in Range I](src/total_waviness_of_numbers_in_range_i.rs)
+([LeetCode](https://leetcode.com/problems/total-waviness-of-numbers-in-range-i))
