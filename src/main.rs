@@ -37,6 +37,7 @@ mod minimum_cost_of_buying_candies_with_discount;
 mod earliest_finish_time_for_land_and_water_rides_i;
 mod earliest_finish_time_for_land_and_water_rides_ii;
 mod total_waviness_of_numbers_in_range_i;
+mod total_waviness_of_numbers_in_range_ii;
 
 #[allow(unreachable_code)]
 #[allow(dead_code)]

@@ -9,7 +9,7 @@ I have solved using Rust.
 
 Date of creation: 04/22/2026
 
-Last updated: 06/04/2026
+Last updated: 06/05/2026
 
-Last problem: [Total Waviness of Numbers in Range I](src/total_waviness_of_numbers_in_range_i.rs)
-([LeetCode](https://leetcode.com/problems/total-waviness-of-numbers-in-range-i))
+Last problem: [Total Waviness of Numbers in Range II](src/total_waviness_of_numbers_in_range_ii.rs)
+([LeetCode](https://leetcode.com/problems/total-waviness-of-numbers-in-range-ii))
