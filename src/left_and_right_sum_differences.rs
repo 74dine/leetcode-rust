@@ -1,20 +1,17 @@
 ﻿#[allow(dead_code)]
 pub fn left_right_difference(nums: Vec<i32>) -> Vec<i32> {
-    let mut sum = 0;
-    let mut prefix = Vec::with_capacity(nums.len());
+    let mut suffix = nums.iter().sum::<i32>();
+    let mut prefix = 0;
 
-    for n in &nums {
-        prefix.push(sum);
-        sum += n;
-    }
+    nums.iter()
+        .map(|n| {
+            suffix -= n;
+            let diff = (prefix - suffix).abs();
+            prefix += n;
 
-    sum = 0;
-    for (i, n) in nums.iter().enumerate().rev() {
-        prefix[i] = (prefix[i] - sum).abs();
-        sum += n;
-    }
-
-    prefix
+            diff
+        })
+        .collect()
 }
 
 #[cfg(test)]
