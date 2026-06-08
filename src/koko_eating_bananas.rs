@@ -1,20 +1,19 @@
 ﻿#[allow(dead_code)]
 pub fn min_eating_speed(piles: Vec<i32>, h: i32) -> i32 {
-    let max = piles.iter().max().unwrap();
+    let (mut low, mut high) = (1, *piles.iter().max().unwrap());
 
-    let (mut low, mut high) = (1, *max);
+    while low < high {
+        let speed = low.midpoint(high);
 
-    while low <= high {
-        let speed = low + (high - low) / 2;
+        let total_hours = piles
+            .iter()
+            .map(|pile| (*pile as f64 / speed as f64).ceil() as i32)
+            .sum::<i32>();
 
-        let total_hours = piles.iter().fold(0i64, |total, pile| {
-            total + (*pile as f64 / speed as f64).ceil() as i64
-        });
-
-        if total_hours > h as i64 {
+        if total_hours > h {
             low = speed + 1;
         } else {
-            high = speed - 1;
+            high = speed;
         }
     }
 
