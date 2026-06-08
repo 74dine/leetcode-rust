@@ -11,5 +11,5 @@ Date of creation: 04/22/2026
 
 Last updated: 06/08/2026
 
-Last problem: [Partition Array According to Given Pivot](src/partition_array_according_to_given_pivot.rs)
-([LeetCode](https://leetcode.com/problems/partition-array-according-to-given-pivot))
+Last problem: [Koko Eating Bananas](src/koko_eating_bananas.rs)
+([LeetCode](https://leetcode.com/problems/koko-eating-bananas))
