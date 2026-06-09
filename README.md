@@ -9,7 +9,7 @@ I have solved using Rust.
 
 Date of creation: 04/22/2026
 
-Last updated: 06/08/2026
+Last updated: 06/09/2026
 
-Last problem: [Koko Eating Bananas](src/koko_eating_bananas.rs)
-([LeetCode](https://leetcode.com/problems/koko-eating-bananas))
+Last problem: [Maximum Total Subarray Value I](src/maximum_total_subarray_value_i.rs)
+([LeetCode](https://leetcode.com/problems/maximum-total-subarray-value-i))
