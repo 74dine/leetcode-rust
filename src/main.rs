@@ -41,6 +41,7 @@ mod total_waviness_of_numbers_in_range_ii;
 mod left_and_right_sum_differences;
 mod partition_array_according_to_given_pivot;
 mod koko_eating_bananas;
+mod add_two_numbers;
 
 #[allow(unreachable_code)]
 #[allow(dead_code)]
